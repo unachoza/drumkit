@@ -1,5 +1,106 @@
 html {
-  font-size: 10px;
+  font-size: 100px;
   background: url(https://i.imgur.com/b9r5sEL.jpg) bottom center;
   background-size: cover;
+}
+
+ul {
+  text-decoration: none;
+}
+.keyboard-container {
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  width: 70%;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: white;
+  font-size: 100px;
+  align-content: center;
+}
+.key {
+  border: white solid 2px;
+  border-radius: 5px;
+  height: 85px;
+  width: 80px;
+  font-size: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+kbd {
+  font-size: 40px;
+}
+
+.sound {
+  font-size: 10px;
+  color: yellow;
+}
+
+@media (max-width: 618px) {
+  
+  .key {
+    height: 70px;
+    width: 65px;
+  }
+}
+
+@media (max-width: 510px) {
+  .key {
+    height: 60px;
+    width: 55px;
+  }
+}
+
+@media (max-width: 510px) {
+  .key {
+    height: 60px;
+    width: 45px;
+  }
+}
+
+@media (max-width: 327px) {
+  .keyboard-container {
+    width: 100%;
+    margin: 0px
+  }
+  .keys{
+    height:  70px;
+    width: 55px;
+
+  }
+}
+
+@media (max-width: 420px) {
+  .keyboard-container {
+    /* width: 90%;
+    margin: 0px auto */
+  }
+  .key{
+    margin: 20px 10px 0px 0px;
+    height: 90px;
+    border: yellow solid 2px;
+    color: yellow;
+  }
+  
+  .sound {
+    color: white;
+    font-size: 15px;
+    bottom: 20px;
+  }
+}
+@media(max-width: 375px ) {
+  .keyboard-container{
+      width: 90%;
+    margin: 0px auto
+  }
+}
+@media(max-width: 375px ) {
+  .keyboard-container{
+      width: 100%;
+    margin: 0px auto
+  }
 }
