@@ -35,7 +35,7 @@ ul {
 }
 .playing {
   transform: scale(1.1);
-  border-color:#ffff00;
+  border-color: #ffff00;
   box-shadow: 0 0 10px #ffff00;
 }
 kbd {
@@ -47,18 +47,12 @@ kbd {
   color: #ffff00;
 }
 
+/* ////////////MEDIA QUERIES ////////// */
+
 @media (max-width: 618px) {
-  
   .key {
     height: 70px;
     width: 65px;
-  }
-}
-
-@media (max-width: 510px) {
-  .key {
-    height: 60px;
-    width: 55px;
   }
 }
 
@@ -69,45 +63,39 @@ kbd {
   }
 }
 
-@media (max-width: 327px) {
-  .keyboard-container {
-    width: 100%;
-    margin: 0px
-  }
-  .keys{
-    height:  70px;
-    width: 55px;
-
-  }
-}
-
 @media (max-width: 420px) {
-  .keyboard-container {
-    /* width: 90%;
-    margin: 0px auto */
-  }
-  .key{
+  .key {
     margin: 20px 10px 0px 0px;
     height: 90px;
     border: #ffff00 solid 2px;
     color: #ffff00;
   }
-  
+
   .sound {
     color: white;
     font-size: 15px;
     bottom: 20px;
   }
-}
-@media(max-width: 375px ) {
-  .keyboard-container{
-      width: 90%;
-    margin: 0px auto
+  .playing {
+    transform: scale(1.1);
+    border-color: #ffffFF;
+    box-shadow: 0 0 10px #ffffff;
   }
 }
-@media(max-width: 375px ) {
-  .keyboard-container{
-      width: 100%;
-    margin: 0px auto
+
+@media (max-width: 375px) {
+  .keyboard-container {
+    width: 100%;
+    margin: 0px auto;
+  }
+}
+@media (max-width: 327px) {
+  .keyboard-container {
+    width: 100%;
+    margin: 0px;
+  }
+  .keys {
+    height: 70px;
+    width: 55px;
   }
 }
