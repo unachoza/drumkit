@@ -10,7 +10,14 @@
     <title>Drum Kit</title>
   </head>
   <body>
+    
+   
+  
     <div class="keyboard-container">
+      <header>
+        <div class="title">Drum Kit</div>
+        <div class="sub-title"> play this drumkit with your keyboard</div>
+      </header>
       <div data-key="65" class="key">
         <kbd>
           A
@@ -76,9 +83,12 @@
     <audio data-key="76" src="sounds/tink.wav"></audio>
     <script>
       const playSound = e => {
+        console.log(e.target);
         const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+        console.log(audio);
 
         const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+        console.log;
         audio.currentTime = 0;
         if (!audio) return;
         key.classList.add('playing');
@@ -87,10 +97,12 @@
       };
       const removeTransition = e => {
         if (e.propertyName !== 'transform') return;
+        console.log('this isi this', this);
         e.target.classList.remove('playing');
       };
 
       const allKeys = document.querySelectorAll('.key');
+      console.log(allKeys);
       allKeys.forEach(key => key.addEventListener('transitionend', removeTransition));
 
       window.addEventListener('keydown', playSound);

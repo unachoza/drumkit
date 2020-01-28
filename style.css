@@ -3,7 +3,25 @@ html {
   background: url(https://i.imgur.com/b9r5sEL.jpg) bottom center;
   background-size: cover;
 }
+header {
+  margin-top: -200px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  align-content: center;
+  position: fixed;
 
+}
+.title {
+  font-size: 30px;
+  margin: auto
+}
+.sub-title{
+  font-size: 27px;
+  margin: auto
+}
 ul {
   text-decoration: none;
 }
@@ -20,7 +38,7 @@ ul {
   align-content: center;
 }
 .key {
-  border: #ffffff solid 2px;
+  border: #000000 solid 3px;
   border-radius: 5px;
   height: 85px;
   width: 80px;
@@ -67,7 +85,7 @@ kbd {
   .key {
     margin: 20px 10px 0px 0px;
     height: 90px;
-    border: #ffff00 solid 2px;
+    border: #000000 solid 4px;
     color: #ffff00;
   }
 
