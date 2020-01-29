@@ -94,6 +94,8 @@
       allKeys.forEach(key => key.addEventListener('transitionend', removeTransition));
 
       window.addEventListener('keydown', playSound);
+      window.addEventListener('touchstart', playSound);
+      
 
       // setTimeout(() => key.classList.remove('playing'), 300);
     </script>
