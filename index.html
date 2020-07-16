@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta name="title" content="Keyboard Drum Kit" />
-    <meta name="description" content="Your keyboard home row is a now an 8 piece drum kit! " />
+    <meta name="description" content="Your keyboard home row is a now an 9 piece drum kit! " />
     <meta name="keywords" content="music, drums, keyboard, typing, games, fun, noise,  accessibility, rock, drumkit " />
     <meta name="robots" content="index, follow" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -16,8 +16,68 @@
       type="image/png"
       href="https://res.cloudinary.com/dh41vh9dx/image/upload/c_scale,w_30/v1568335617/Big_Note-512.png"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap" rel="stylesheet" />
     <title>Keyboard Drum Kit</title>
+    <style>
+      html {
+        background: url('https://res.cloudinary.com/dh41vh9dx/image/upload/c_scale, w_1400/v1594935458/b9r5sEL.jpg')
+          bottom center;
+      }
+      .keyboard-container {
+        display: flex;
+        flex-flow: row wrap;
+        height: 100vh;
+        width: 70%;
+        align-content: center;
+        justify-content: space-between;
+        color: #fff;
+        margin: auto;
+      }
+      .key {
+        border: #ff0 solid 2px;
+        border-radius: 5px;
+        height: 85px;
+        width: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+        transition: all 70ms;
+        background-color: #04040461;
+      }
+      .playing {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px #ff0;
+      }
+      kbd {
+        font-size: 40px;
+      }
+      .sound {
+        font-size: 12px;
+        color: #ff0;
+        font-family: 'Work Sans', sans-serif;
+        text-transform: uppercase;
+      }
+      @media (max-width: 512px) {
+        .key {
+          margin: 10px 5px;
+          height: 90px;
+          width: 69px;
+        }
+      }
+      @media (max-width: 375px) {
+        .keyboard-container {
+          width: 100%;
+          justify-content: space-around;
+        }
+        .key {
+          margin: 10px 6px;
+          height: 95px;
+          width: 85px;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="keyboard-container">
