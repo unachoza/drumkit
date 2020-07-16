@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="title" content="Keyboard Drum Kit" />
+    <meta name="description" content="Your keyboard home row is a now an 8 piece drum kit! " />
+    <meta name="keywords" content="music, drums, keyboard, typing, games, fun, noise,  accessibility, rock, drumkit " />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <meta name="author" content="Arianna Choza" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://res.cloudinary.com/dh41vh9dx/image/upload/c_scale,w_30/v1568335617/Big_Note-512.png"
+    />
     <link rel="stylesheet" href="style.css" />
-    <script src="myscript.js"></script>
-
-    <title>Drum Kit</title>
+    <title>Keyboard Drum Kit</title>
   </head>
   <body>
     <div class="keyboard-container">
@@ -75,7 +85,7 @@
     <audio data-key="75" src="sounds/tom.wav"></audio>
     <audio data-key="76" src="sounds/tink.wav"></audio>
     <script>
-      const playSound = e => {
+      const playSound = (e) => {
         const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
 
         const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
@@ -85,19 +95,16 @@
 
         audio.play();
       };
-      const removeTransition = e => {
+      const removeTransition = (e) => {
         if (e.propertyName !== 'transform') return;
         e.target.classList.remove('playing');
       };
 
       const allKeys = document.querySelectorAll('.key');
-      allKeys.forEach(key => key.addEventListener('transitionend', removeTransition));
+      allKeys.forEach((key) => key.addEventListener('transitionend', removeTransition));
 
       window.addEventListener('keydown', playSound);
       window.addEventListener('touchstart', playSound);
-      
-
-      // setTimeout(() => key.classList.remove('playing'), 300);
     </script>
   </body>
 </html>
